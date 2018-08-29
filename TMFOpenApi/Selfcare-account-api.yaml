@@ -1,0 +1,4829 @@
+paths:
+  /tmf-api/accountManagement/v2/partyAccount:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listPartyAccount
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createPartyAccount
+      parameters:
+        - name: partyAccount
+          in: body
+          description: The Party Account to be created
+          required: true
+          schema:
+            description: The Party Account to be created
+            $ref: '#/definitions/PartyAccount_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/partyAccount/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrievePartyAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Party Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchPartyAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Party Account
+          required: true
+          type: string
+        - name: partyAccount
+          in: body
+          description: The Party Account to be updated
+          required: true
+          schema:
+            description: The Party Account to be updated
+            $ref: '#/definitions/PartyAccount_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deletePartyAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Party Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/billingAccount:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listBillingAccount
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createBillingAccount
+      parameters:
+        - name: billingAccount
+          in: body
+          description: The Billing Account to be created
+          required: true
+          schema:
+            description: The Billing Account to be created
+            $ref: '#/definitions/BillingAccount_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/billingAccount/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrieveBillingAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Billing Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchBillingAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Billing Account
+          required: true
+          type: string
+        - name: billingAccount
+          in: body
+          description: The Billing Account to be updated
+          required: true
+          schema:
+            description: The Billing Account to be updated
+            $ref: '#/definitions/BillingAccount_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deleteBillingAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Billing Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/settlementAccount:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listSettlementAccount
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createSettlementAccount
+      parameters:
+        - name: settlementAccount
+          in: body
+          description: The Settlement Account to be created
+          required: true
+          schema:
+            description: The Settlement Account to be created
+            $ref: '#/definitions/SettlementAccount_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/settlementAccount/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrieveSettlementAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Settlement Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchSettlementAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Settlement Account
+          required: true
+          type: string
+        - name: settlementAccount
+          in: body
+          description: The Settlement Account to be updated
+          required: true
+          schema:
+            description: The Settlement Account to be updated
+            $ref: '#/definitions/SettlementAccount_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deleteSettlementAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Settlement Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/financialAccount:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listFinancialAccount
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createFinancialAccount
+      parameters:
+        - name: financialAccount
+          in: body
+          description: The Financial Account to be created
+          required: true
+          schema:
+            description: The Financial Account to be created
+            $ref: '#/definitions/FinancialAccount_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/financialAccount/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrieveFinancialAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Financial Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchFinancialAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Financial Account
+          required: true
+          type: string
+        - name: financialAccount
+          in: body
+          description: The Financial Account to be updated
+          required: true
+          schema:
+            description: The Financial Account to be updated
+            $ref: '#/definitions/FinancialAccount_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deleteFinancialAccount
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Financial Account
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/billingCycleSpecification:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listBillingCycleSpecification
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createBillingCycleSpecification
+      parameters:
+        - name: billingCycleSpecification
+          in: body
+          description: The Billing Cycle Specification to be created
+          required: true
+          schema:
+            description: The Billing Cycle Specification to be created
+            $ref: '#/definitions/BillingCycleSpecification_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/billingCycleSpecification/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrieveBillingCycleSpecification
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Billing Cycle Specification
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchBillingCycleSpecification
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Billing Cycle Specification
+          required: true
+          type: string
+        - name: billingCycleSpecification
+          in: body
+          description: The Billing Cycle Specification to be updated
+          required: true
+          schema:
+            description: The Billing Cycle Specification to be updated
+            $ref: '#/definitions/BillingCycleSpecification_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deleteBillingCycleSpecification
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Billing Cycle Specification
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/billFormat:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listBillFormat
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createBillFormat
+      parameters:
+        - name: billFormat
+          in: body
+          description: The Bill Format to be created
+          required: true
+          schema:
+            description: The Bill Format to be created
+            $ref: '#/definitions/BillFormat_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/billFormat/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrieveBillFormat
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Bill Format
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchBillFormat
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Bill Format
+          required: true
+          type: string
+        - name: billFormat
+          in: body
+          description: The Bill Format to be updated
+          required: true
+          schema:
+            description: The Bill Format to be updated
+            $ref: '#/definitions/BillFormat_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deleteBillFormat
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Bill Format
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/billPresentationMedia:
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.listBillPresentationMedia
+      parameters:
+        - name: fields
+          in: query
+          description: Comma separated properties to display in response
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: Requested index for start of resources to be provided in response
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: Requested number of resources to be provided in response
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.createBillPresentationMedia
+      parameters:
+        - name: billPresentationMedia
+          in: body
+          description: The Bill Presentation Media to be created
+          required: true
+          schema:
+            description: The Bill Presentation Media to be created
+            $ref: '#/definitions/BillPresentationMedia_Create'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Created
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/billPresentationMedia/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.retrieveBillPresentationMedia
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Bill Presentation Media
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    patch:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.patchBillPresentationMedia
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Bill Presentation Media
+          required: true
+          type: string
+        - name: billPresentationMedia
+          in: body
+          description: The Bill Presentation Media to be updated
+          required: true
+          schema:
+            description: The Bill Presentation Media to be updated
+            $ref: '#/definitions/BillPresentationMedia_Update'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Updated
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      operationId: swagger_tmf-api_accountManagement_v2_.deleteBillPresentationMedia
+      parameters:
+        - name: id
+          in: path
+          description: Identifier of the Bill Presentation Media
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/accountManagement/v2/hub:
+    post:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      summary: >-
+        Sets the communication endpoint address the service instance must use to
+        deliver information about its health state, execution state, failures
+        and metrics.
+      operationId: swagger_tmf-api_accountManagement_v2_.registerListener
+      parameters:
+        - name: data
+          in: body
+          description: Data containing the callback endpoint to deliver the information
+          required: true
+          schema:
+            description: Data containing the callback endpoint to deliver the information
+            $ref: '#/definitions/EventSubscriptionInput'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Subscribed
+            $ref: '#/definitions/EventSubscription'
+      deprecated: false
+  '/tmf-api/accountManagement/v2/hub/{id}':
+    delete:
+      tags:
+        - swagger_tmf-api_accountManagement_v2_
+      summary: >-
+        Resets the communication endpoint address the service instance must use
+        to deliver information about its health state, execution state, failures
+        and metrics.
+      operationId: swagger_tmf-api_accountManagement_v2_.unregisterListener
+      parameters:
+        - name: id
+          in: path
+          description: The id of the registered listener
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /FinancialAccounts:
+    post:
+      tags:
+        - FinancialAccount
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: FinancialAccount.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+    patch:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: FinancialAccount.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+    put:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: FinancialAccount.replaceOrCreate__put_FinancialAccounts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+    get:
+      tags:
+        - FinancialAccount
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: FinancialAccount.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  /FinancialAccounts/replaceOrCreate:
+    post:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: FinancialAccount.replaceOrCreate__post_FinancialAccounts_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  /FinancialAccounts/upsertWithWhere:
+    post:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: FinancialAccount.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  '/FinancialAccounts/{id}/exists':
+    get:
+      tags:
+        - FinancialAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'FinancialAccount.exists__get_FinancialAccounts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/FinancialAccounts/{id}':
+    head:
+      tags:
+        - FinancialAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'FinancialAccount.exists__head_FinancialAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - FinancialAccount
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: FinancialAccount.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+    put:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'FinancialAccount.replaceById__put_FinancialAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+    delete:
+      tags:
+        - FinancialAccount
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: FinancialAccount.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: FinancialAccount.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/FinancialAccount'
+        - name: id
+          in: path
+          description: FinancialAccount id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  '/FinancialAccounts/{id}/replace':
+    post:
+      tags:
+        - FinancialAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'FinancialAccount.replaceById__post_FinancialAccounts_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/FinancialAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  /FinancialAccounts/findOne:
+    get:
+      tags:
+        - FinancialAccount
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: FinancialAccount.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/FinancialAccount'
+      deprecated: false
+  /BillingCycleSpecifications:
+    post:
+      tags:
+        - BillingCycleSpecification
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: BillingCycleSpecification.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingCycleSpecification'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+    patch:
+      tags:
+        - BillingCycleSpecification
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: BillingCycleSpecification.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingCycleSpecification'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+    put:
+      tags:
+        - BillingCycleSpecification
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        BillingCycleSpecification.replaceOrCreate__put_BillingCycleSpecifications
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingCycleSpecification'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+    get:
+      tags:
+        - BillingCycleSpecification
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: BillingCycleSpecification.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+  '/BillingCycleSpecifications/{id}':
+    head:
+      tags:
+        - BillingCycleSpecification
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillingCycleSpecification.exists__head_BillingCycleSpecifications_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - BillingCycleSpecification
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: BillingCycleSpecification.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+    put:
+      tags:
+        - BillingCycleSpecification
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: >-
+        BillingCycleSpecification.replaceById__put_BillingCycleSpecifications_{id}
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingCycleSpecification'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+    delete:
+      tags:
+        - BillingCycleSpecification
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: BillingCycleSpecification.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - BillingCycleSpecification
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: BillingCycleSpecification.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillingCycleSpecification'
+        - name: id
+          in: path
+          description: BillingCycleSpecification id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+  /BillingCycleSpecifications/findOne:
+    get:
+      tags:
+        - BillingCycleSpecification
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: BillingCycleSpecification.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingCycleSpecification'
+      deprecated: false
+  /BillFormats:
+    post:
+      tags:
+        - BillFormat
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: BillFormat.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+    patch:
+      tags:
+        - BillFormat
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: BillFormat.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+    put:
+      tags:
+        - BillFormat
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: BillFormat.replaceOrCreate__put_BillFormats
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+    get:
+      tags:
+        - BillFormat
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: BillFormat.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BillFormat'
+      deprecated: false
+  /BillFormats/replaceOrCreate:
+    post:
+      tags:
+        - BillFormat
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: BillFormat.replaceOrCreate__post_BillFormats_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+  /BillFormats/upsertWithWhere:
+    post:
+      tags:
+        - BillFormat
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: BillFormat.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+  '/BillFormats/{id}/exists':
+    get:
+      tags:
+        - BillFormat
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillFormat.exists__get_BillFormats_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/BillFormats/{id}':
+    head:
+      tags:
+        - BillFormat
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillFormat.exists__head_BillFormats_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - BillFormat
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: BillFormat.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+    put:
+      tags:
+        - BillFormat
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BillFormat.replaceById__put_BillFormats_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+    delete:
+      tags:
+        - BillFormat
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: BillFormat.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - BillFormat
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: BillFormat.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillFormat'
+        - name: id
+          in: path
+          description: BillFormat id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+  '/BillFormats/{id}/replace':
+    post:
+      tags:
+        - BillFormat
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BillFormat.replaceById__post_BillFormats_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+  /BillFormats/findOne:
+    get:
+      tags:
+        - BillFormat
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: BillFormat.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillFormat'
+      deprecated: false
+  /BillFormats/update:
+    post:
+      tags:
+        - BillFormat
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: BillFormat.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillFormat'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /BillFormats/count:
+    get:
+      tags:
+        - BillFormat
+      summary: Count instances of the model matched by where from the data source.
+      operationId: BillFormat.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /BillPresentationMedia:
+    post:
+      tags:
+        - BillPresentationMedia
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: BillPresentationMedia.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+    patch:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: BillPresentationMedia.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+    put:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: BillPresentationMedia.replaceOrCreate__put_BillPresentationMedia
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+    get:
+      tags:
+        - BillPresentationMedia
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: BillPresentationMedia.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  /BillPresentationMedia/replaceOrCreate:
+    post:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        BillPresentationMedia.replaceOrCreate__post_BillPresentationMedia_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  /BillPresentationMedia/upsertWithWhere:
+    post:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: BillPresentationMedia.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  '/BillPresentationMedia/{id}/exists':
+    get:
+      tags:
+        - BillPresentationMedia
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillPresentationMedia.exists__get_BillPresentationMedia_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/BillPresentationMedia/{id}':
+    head:
+      tags:
+        - BillPresentationMedia
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillPresentationMedia.exists__head_BillPresentationMedia_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - BillPresentationMedia
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: BillPresentationMedia.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+    put:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BillPresentationMedia.replaceById__put_BillPresentationMedia_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+    delete:
+      tags:
+        - BillPresentationMedia
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: BillPresentationMedia.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: BillPresentationMedia.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillPresentationMedia'
+        - name: id
+          in: path
+          description: BillPresentationMedia id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  '/BillPresentationMedia/{id}/replace':
+    post:
+      tags:
+        - BillPresentationMedia
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: >-
+        BillPresentationMedia.replaceById__post_BillPresentationMedia_{id}_replace
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  /BillPresentationMedia/findOne:
+    get:
+      tags:
+        - BillPresentationMedia
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: BillPresentationMedia.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillPresentationMedia'
+      deprecated: false
+  /BillPresentationMedia/update:
+    post:
+      tags:
+        - BillPresentationMedia
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: BillPresentationMedia.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillPresentationMedia'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /BillPresentationMedia/count:
+    get:
+      tags:
+        - BillPresentationMedia
+      summary: Count instances of the model matched by where from the data source.
+      operationId: BillPresentationMedia.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /PartyAccounts:
+    post:
+      tags:
+        - PartyAccount
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: PartyAccount.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+    patch:
+      tags:
+        - PartyAccount
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: PartyAccount.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+    put:
+      tags:
+        - PartyAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: PartyAccount.replaceOrCreate__put_PartyAccounts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+    get:
+      tags:
+        - PartyAccount
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: PartyAccount.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  /PartyAccounts/replaceOrCreate:
+    post:
+      tags:
+        - PartyAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: PartyAccount.replaceOrCreate__post_PartyAccounts_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  /PartyAccounts/upsertWithWhere:
+    post:
+      tags:
+        - PartyAccount
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: PartyAccount.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  '/PartyAccounts/{id}/exists':
+    get:
+      tags:
+        - PartyAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'PartyAccount.exists__get_PartyAccounts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/PartyAccounts/{id}':
+    head:
+      tags:
+        - PartyAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'PartyAccount.exists__head_PartyAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - PartyAccount
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: PartyAccount.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+    put:
+      tags:
+        - PartyAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'PartyAccount.replaceById__put_PartyAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+    delete:
+      tags:
+        - PartyAccount
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: PartyAccount.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - PartyAccount
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: PartyAccount.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/PartyAccount'
+        - name: id
+          in: path
+          description: PartyAccount id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  '/PartyAccounts/{id}/replace':
+    post:
+      tags:
+        - PartyAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'PartyAccount.replaceById__post_PartyAccounts_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  /PartyAccounts/findOne:
+    get:
+      tags:
+        - PartyAccount
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: PartyAccount.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/PartyAccount'
+      deprecated: false
+  /PartyAccounts/update:
+    post:
+      tags:
+        - PartyAccount
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: PartyAccount.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/PartyAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /PartyAccounts/count:
+    get:
+      tags:
+        - PartyAccount
+      summary: Count instances of the model matched by where from the data source.
+      operationId: PartyAccount.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /BillingAccounts:
+    post:
+      tags:
+        - BillingAccount
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: BillingAccount.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+    patch:
+      tags:
+        - BillingAccount
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: BillingAccount.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+    put:
+      tags:
+        - BillingAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: BillingAccount.replaceOrCreate__put_BillingAccounts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+    get:
+      tags:
+        - BillingAccount
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: BillingAccount.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BillingAccount'
+      deprecated: false
+  '/BillingAccounts/{id}/exists':
+    get:
+      tags:
+        - BillingAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillingAccount.exists__get_BillingAccounts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/BillingAccounts/{id}':
+    head:
+      tags:
+        - BillingAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BillingAccount.exists__head_BillingAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - BillingAccount
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: BillingAccount.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+    put:
+      tags:
+        - BillingAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BillingAccount.replaceById__put_BillingAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+    delete:
+      tags:
+        - BillingAccount
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: BillingAccount.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - BillingAccount
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: BillingAccount.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillingAccount'
+        - name: id
+          in: path
+          description: BillingAccount id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+  '/BillingAccounts/{id}/replace':
+    post:
+      tags:
+        - BillingAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BillingAccount.replaceById__post_BillingAccounts_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BillingAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+  /BillingAccounts/findOne:
+    get:
+      tags:
+        - BillingAccount
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: BillingAccount.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BillingAccount'
+      deprecated: false
+  /BillingAccounts/update:
+    post:
+      tags:
+        - BillingAccount
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: BillingAccount.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BillingAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /BillingAccounts/count:
+    get:
+      tags:
+        - BillingAccount
+      summary: Count instances of the model matched by where from the data source.
+      operationId: BillingAccount.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /SettlementAccounts:
+    post:
+      tags:
+        - SettlementAccount
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: SettlementAccount.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SettlementAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+    patch:
+      tags:
+        - SettlementAccount
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: SettlementAccount.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SettlementAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+    put:
+      tags:
+        - SettlementAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: SettlementAccount.replaceOrCreate__put_SettlementAccounts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SettlementAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+    get:
+      tags:
+        - SettlementAccount
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: SettlementAccount.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+  /SettlementAccounts/replaceOrCreate:
+    post:
+      tags:
+        - SettlementAccount
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        SettlementAccount.replaceOrCreate__post_SettlementAccounts_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SettlementAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+  /SettlementAccounts/upsertWithWhere:
+    post:
+      tags:
+        - SettlementAccount
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: SettlementAccount.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SettlementAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+  '/SettlementAccounts/{id}/exists':
+    get:
+      tags:
+        - SettlementAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'SettlementAccount.exists__get_SettlementAccounts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/SettlementAccounts/{id}':
+    head:
+      tags:
+        - SettlementAccount
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'SettlementAccount.exists__head_SettlementAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - SettlementAccount
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: SettlementAccount.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+    put:
+      tags:
+        - SettlementAccount
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'SettlementAccount.replaceById__put_SettlementAccounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/SettlementAccount'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+    delete:
+      tags:
+        - SettlementAccount
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: SettlementAccount.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - SettlementAccount
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: SettlementAccount.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/SettlementAccount'
+        - name: id
+          in: path
+          description: SettlementAccount id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+  /SettlementAccounts/findOne:
+    get:
+      tags:
+        - SettlementAccount
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: SettlementAccount.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/SettlementAccount'
+      deprecated: false
+definitions:
+  PartyAccount_Create:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+      - relatedParty
+    additionalProperties: false
+  PartyAccount:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      href:
+        description: Unique reference of the account
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+    required:
+      - name
+    additionalProperties: false
+  PartyAccount_Update:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  BillingAccount_Create:
+    properties:
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+      - relatedParty
+    additionalProperties: false
+  BillingAccount:
+    properties:
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      href:
+        description: Unique reference of the account
+        type: string
+      id:
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+    required:
+      - name
+      - relatedParty
+    additionalProperties: false
+  BillingAccount_Update:
+    properties:
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  SettlementAccount_Create:
+    properties:
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+      - relatedParty
+    additionalProperties: false
+  SettlementAccount:
+    properties:
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      href:
+        description: Unique reference of the account
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+    required:
+      - name
+      - relatedParty
+    additionalProperties: false
+  SettlementAccount_Update:
+    properties:
+      paymentStatus:
+        description: 'The condition of the account, such as due, paid, in arrears.'
+        type: string
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      billStructure:
+        $ref: '#/definitions/BillStructure'
+      paymentPlan:
+        type: array
+        items:
+          $ref: '#/definitions/PaymentPlan'
+      financialAccount:
+        $ref: '#/definitions/FinancialAccountRef'
+      defaultPaymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  FinancialAccount_Create:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+    additionalProperties: false
+  FinancialAccount:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      href:
+        description: Unique reference of the account
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      lastModified:
+        format: date-time
+        description: Date of last modification of the account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+    required:
+      - name
+    additionalProperties: false
+  FinancialAccount_Update:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          A categorization of an account, such as individual, joint, and so
+          forth, whose instances share some of the same characteristics. Note:
+          for flexibility we use a String here but an implementation may use an
+          enumeration with a limited list of valid values.
+        type: string
+      creditLimit:
+        description: The maximum amount of money that may be charged on an account
+        $ref: '#/definitions/Money'
+      description:
+        description: Detailed description of the party account
+        type: string
+      name:
+        description: Name of the account
+        type: string
+      state:
+        description: >-
+          Contains the lifecycle state such as: Active, Closed, Suspended and so
+          on.
+        type: string
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      taxExemption:
+        type: array
+        items:
+          $ref: '#/definitions/AccountTaxExemption'
+      contact:
+        type: array
+        items:
+          $ref: '#/definitions/Contact'
+      accountBalance:
+        type: array
+        items:
+          $ref: '#/definitions/AccountBalance'
+      accountRelationship:
+        type: array
+        items:
+          $ref: '#/definitions/AccountRelationship'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  BillingCycleSpecification_Create:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      billingDateShift:
+        description: >-
+          An offset of a billing/settlement date. The offset is expressed as
+          number of days with regard to the start of the billing/settlement
+          period.
+        type: number
+        format: double
+      billingPeriod:
+        description: >-
+          A billing time period. It can be recurring, for example: week, month,
+          quarter of year, year .
+        type: string
+      chargeDateOffset:
+        description: >-
+          An offset of a date through which charges previously received by the
+          billing system will appear on the bill. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      creditDateOffset:
+        description: >-
+          An offset of a date through which credits previously received by the
+          billing system will appear on the bill. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      description:
+        description: An explanation regarding this billing cycle specification
+        type: string
+      frequency:
+        description: Frequency of the billing cycle (monthly for instance)
+        type: string
+      mailingDateOffset:
+        description: >-
+          An offset of a customer bill mailing date. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      name:
+        description: A short descriptive name
+        type: string
+      paymentDueDateOffset:
+        description: >-
+          An offset of a payment due date. The offset is expressed as number of
+          days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      validFor:
+        description: The period for which the billing specification cycle is valid
+        $ref: '#/definitions/TimePeriod'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+    additionalProperties: false
+  BillingCycleSpecification:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      billingDateShift:
+        description: >-
+          An offset of a billing/settlement date. The offset is expressed as
+          number of days with regard to the start of the billing/settlement
+          period.
+        type: number
+        format: double
+      billingPeriod:
+        description: >-
+          A billing time period. It can be recurring, for example: week, month,
+          quarter of year, year .
+        type: string
+      chargeDateOffset:
+        description: >-
+          An offset of a date through which charges previously received by the
+          billing system will appear on the bill. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      creditDateOffset:
+        description: >-
+          An offset of a date through which credits previously received by the
+          billing system will appear on the bill. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      description:
+        description: An explanation regarding this billing cycle specification
+        type: string
+      frequency:
+        description: Frequency of the billing cycle (monthly for instance)
+        type: string
+      href:
+        description: Reference of the billing cycle specification
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      mailingDateOffset:
+        description: >-
+          An offset of a customer bill mailing date. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      name:
+        description: A short descriptive name
+        type: string
+      paymentDueDateOffset:
+        description: >-
+          An offset of a payment due date. The offset is expressed as number of
+          days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      validFor:
+        description: The period for which the billing specification cycle is valid
+        $ref: '#/definitions/TimePeriod'
+    required:
+      - name
+    additionalProperties: false
+  BillingCycleSpecification_Update:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      billingDateShift:
+        description: >-
+          An offset of a billing/settlement date. The offset is expressed as
+          number of days with regard to the start of the billing/settlement
+          period.
+        type: number
+        format: double
+      billingPeriod:
+        description: >-
+          A billing time period. It can be recurring, for example: week, month,
+          quarter of year, year .
+        type: string
+      chargeDateOffset:
+        description: >-
+          An offset of a date through which charges previously received by the
+          billing system will appear on the bill. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      creditDateOffset:
+        description: >-
+          An offset of a date through which credits previously received by the
+          billing system will appear on the bill. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      description:
+        description: An explanation regarding this billing cycle specification
+        type: string
+      frequency:
+        description: Frequency of the billing cycle (monthly for instance)
+        type: string
+      mailingDateOffset:
+        description: >-
+          An offset of a customer bill mailing date. The offset is expressed as
+          number of days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      name:
+        description: A short descriptive name
+        type: string
+      paymentDueDateOffset:
+        description: >-
+          An offset of a payment due date. The offset is expressed as number of
+          days with regard to the start of the BillingPeriod.
+        type: number
+        format: double
+      validFor:
+        description: The period for which the billing specification cycle is valid
+        $ref: '#/definitions/TimePeriod'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  BillFormat_Create:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      description:
+        description: An explanatory text for this bill format
+        type: string
+      name:
+        description: A short descriptive name
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+    additionalProperties: false
+  BillFormat:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      description:
+        description: An explanatory text for this bill format
+        type: string
+      href:
+        description: Reference of the bill format
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: A short descriptive name
+        type: string
+    required:
+      - name
+    additionalProperties: false
+  BillFormat_Update:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      description:
+        description: An explanatory text for this bill format
+        type: string
+      name:
+        description: A short descriptive name
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  BillPresentationMedia_Create:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      description:
+        description: An explanatory text describing this bill presentation media
+        type: string
+      name:
+        description: A short descriptive name
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - name
+    additionalProperties: false
+  BillPresentationMedia:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      description:
+        description: An explanatory text describing this bill presentation media
+        type: string
+      href:
+        description: Reference of the bill presentation media
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: A short descriptive name
+        type: string
+    required:
+      - name
+    additionalProperties: false
+  BillPresentationMedia_Update:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      description:
+        description: An explanatory text describing this bill presentation media
+        type: string
+      name:
+        description: A short descriptive name
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  EventSubscriptionInput:
+    properties:
+      callback:
+        description: The callback being registered.
+        type: string
+      query:
+        description: additional data to be passed
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - callback
+    additionalProperties: false
+  EventSubscription:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      callback:
+        description: The callback being registered.
+        type: string
+      query:
+        description: additional data to be passed
+        type: string
+    required:
+      - callback
+    additionalProperties: false
+  x-any:
+    properties: {}
+  Money:
+    properties:
+      unit:
+        description: Currency (ISO4217 norm uses 3 letters to define the currency)
+        type: string
+      value:
+        format: float
+        description: A positive floating point number
+        type: number
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  RelatedPartyRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      href:
+        description: >-
+          Reference of the related party, could be a party reference or a party
+          role reference
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: Name of the related party
+        type: string
+      role:
+        description: Role of the related party.
+        type: string
+    required:
+      - name
+    additionalProperties: false
+  AccountTaxExemption:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      certificateNumber:
+        description: >-
+          Identifier of a document that shows proof of exemption from taxes for
+          the taxing jurisdiction
+        type: string
+      issuingJurisdiction:
+        description: Name of the taxing jurisdiction for which taxes are exempt
+        type: string
+      reason:
+        description: Reason of the tax exemption
+        type: string
+      validFor:
+        description: Period for which the exemption is valid
+        $ref: '#/definitions/TimePeriod'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - issuingJurisdiction
+      - validFor
+    additionalProperties: false
+  Contact:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      contactName:
+        description: A displayable name for that contact
+        type: string
+      contactType:
+        description: 'Type of contact (primary, secondary...)'
+        type: string
+      partyRoleType:
+        description: >-
+          Identifies what kind of party role type is linked to the contact (a
+          account manager...)
+        type: string
+      validFor:
+        description: Validity period of that contact
+        $ref: '#/definitions/TimePeriod'
+      contactMedium:
+        type: array
+        items:
+          $ref: '#/definitions/ContactMedium'
+      relatedParty:
+        $ref: '#/definitions/RelatedPartyRef'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - contactType
+      - validFor
+    additionalProperties: false
+  AccountBalance:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          Type of the balance : deposit balance, disputed balance, loyalty
+          balance, receivable balance...
+        type: string
+      amount:
+        description: Balance amount
+        $ref: '#/definitions/Money'
+      validFor:
+        description: Balance validity period
+        $ref: '#/definitions/TimePeriod'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - type
+      - amount
+      - validFor
+    additionalProperties: false
+  AccountRelationship:
+    properties:
+      relationshipType:
+        description: Type of relationship
+        type: string
+      validFor:
+        description: Validity period of that relationship
+        $ref: '#/definitions/TimePeriod'
+      account:
+        $ref: '#/definitions/AccountRef'
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - relationshipType
+      - validFor
+    additionalProperties: false
+  TimePeriod:
+    properties:
+      endDateTime:
+        format: date-time
+        description: 'An instant of time, ending at the TimePeriod.'
+        type: string
+      startDateTime:
+        format: date-time
+        description: 'An instant of time, starting at the TimePeriod'
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  ContactMedium:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: >-
+          Type of the contact medium, such as: email address, telephone number,
+          postal address
+        type: string
+      preferred:
+        description: 'If true, indicates that is the preferred contact medium'
+        type: boolean
+      validFor:
+        description: The time period that the contact medium is valid for
+        $ref: '#/definitions/TimePeriod'
+      characteristic:
+        $ref: '#/definitions/MediumCharacteristic'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  MediumCharacteristic:
+    properties:
+      city:
+        description: The city
+        type: string
+      country:
+        description: The country
+        type: string
+      emailAddress:
+        description: Full email address in standard format
+        type: string
+      faxNumber:
+        description: The fax number of the contact
+        type: string
+      phoneNumber:
+        description: The primary phone number of the contact
+        type: string
+      postCode:
+        description: Postcode
+        type: string
+      stateOrProvince:
+        description: State or province
+        type: string
+      street1:
+        description: Describes the street
+        type: string
+      street2:
+        description: Complementary street description
+        type: string
+      type:
+        description: 'Type of medium (fax, mobile phone...)'
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  AccountRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      description:
+        description: Detailed description of the account
+        type: string
+      href:
+        description: Reference of the account
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: Name of the account
+        type: string
+    additionalProperties: false
+  BillStructure:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Generic attribute containing the name of the resource class type
+        type: string
+      presentationMedia:
+        type: array
+        items:
+          $ref: '#/definitions/BillPresentationMediaRef'
+      format:
+        $ref: '#/definitions/BillFormatRef'
+      cycleSpecification:
+        $ref: '#/definitions/BillingCycleSpecificationRef'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  PaymentPlan:
+    properties:
+      baseType:
+        description: >-
+          Generic attribute indicating the base class type of the extension
+          class of the current object. Useful only when the class type of the
+          current  object is unknown to the implementation.
+        type: string
+      schemaLocation:
+        description: >-
+          Generic attribute containing the link to the schema that defines the
+          structure of the class type of the current object.
+        type: string
+      type:
+        description: Type of payment plan
+        type: string
+      numberOfPayments:
+        description: Number of payments used to spread the global payment
+        type: number
+        format: double
+      paymentFrequency:
+        description: 'Frequency of the payments, such as monthly and bimonthly'
+        type: string
+      priority:
+        description: Priority of the payment plan
+        type: number
+        format: double
+      status:
+        description: 'Status of the payment plan (effective, ineffective)'
+        type: string
+      totalAmount:
+        description: Amount paid
+        $ref: '#/definitions/Money'
+      validFor:
+        description: Validity period of the payment plan
+        $ref: '#/definitions/TimePeriod'
+      paymentMethod:
+        $ref: '#/definitions/PaymentMethodRef'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  FinancialAccountRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      href:
+        description: Unique reference of the account
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: Name of the account
+        type: string
+      accountBalance:
+        $ref: '#/definitions/AccountBalance'
+    additionalProperties: false
+  PaymentMethodRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      href:
+        description: Reference of the payment mean
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: Name of the payment mean
+        type: string
+    additionalProperties: false
+  BillPresentationMediaRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      href:
+        description: Reference of the bill presentation media
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: A short descriptive name
+        type: string
+    additionalProperties: false
+  BillFormatRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      href:
+        description: Reference of the bill format
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: A short descriptive name
+        type: string
+    additionalProperties: false
+  BillingCycleSpecificationRef:
+    properties:
+      referredType:
+        description: >-
+          Generic attribute indicating the name of the class type of the
+          referred resource entity.
+        type: string
+      dateShift:
+        description: >-
+          An offset of a billing/settlement date. The offset is expressed as
+          number of days with regard to the start of the billing/settlement
+          period.
+        type: number
+        format: double
+      frequency:
+        description: Frequency of the billing cycle (monthly for instance)
+        type: string
+      href:
+        description: Reference of the billing cycle specification
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: A short descriptive name
+        type: string
+    additionalProperties: false
+  Error:
+    properties:
+      code:
+        description: Application related code.
+        type: number
+        format: double
+      reason:
+        description: Text that explains the reason for error.
+        type: number
+        format: double
+      message:
+        description: >-
+          (optional) Text that provide more details and corrective actions
+          related to the error.
+        type: string
+      status:
+        description: (optional) http error code extension like 400-2
+        type: number
+        format: double
+      referenceError:
+        description: >-
+          (optional) A URL to online documentation that provides more
+          information about the error.
+        type: string
+      type:
+        description: (optional) The class type of a REST resource.
+        type: string
+      schemaLocation:
+        description: (optional) A link to the schema describing a REST resource.
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - code
+      - reason
+    additionalProperties: false
+  ObjectID:
+    type: string
+    pattern: '^[a-fA-F\d]{24}$'
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: selfcare-account-api
+  version: 1.0.0
+  title: Selfcare-account-api
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions: {}
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: >-
+          https://apiconnect-6db6dc1f-1083-4d28-9286-d00c3b1cc5c4.saisrinivasgortiibmcom-dev.apic.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

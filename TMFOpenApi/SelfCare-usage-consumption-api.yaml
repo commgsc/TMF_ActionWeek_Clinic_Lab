@@ -1,0 +1,1523 @@
+paths:
+  /tmf-api/usageConsumption/v1/usageConsumptionReport:
+    get:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: >-
+        This operation is used to request the calculation of a new usage
+        consumption report for a specific product identified by a msisdn number
+        for example.
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportFind
+      parameters:
+        - name: fields
+          in: query
+          description: Attribute selection
+          required: false
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/tmf-api/usageConsumption/v1/usageConsumptionReport/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: >
+        This operation retrieves an usage report entity. This operation could be
+        used only if the server has saved the usage consumption report on its
+        database after calculation.
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportGet
+      parameters:
+        - name: id
+          in: path
+          description: Unique identifier of the usage consumption report
+          required: true
+          type: string
+        - name: fields
+          in: query
+          description: Attribute selection
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Success
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: |
+        This operation deletes a usage report entity.
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportDelete
+      parameters:
+        - name: id
+          in: path
+          description: Unique identifier of the usage consumption report
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/usageConsumption/v1/usageConsumptionReportRequest:
+    post:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: >-
+        This operation creates an usage consumption report request entity. This
+        operation is used by the requester when the server couldn’t calculate
+        and generate the report in synchronous mode.
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportRequestCreate
+      parameters:
+        - name: UsageConsumptionReportRequest
+          in: body
+          description: ''
+          required: true
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequestIn'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Success
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    get:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: >-
+        This operation is used to retrieve usage consumption report requests
+        corresponding to search criteria like a specific product identified by a
+        msisdn number for example.
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportRequestFind
+      parameters:
+        - name: fields
+          in: query
+          description: Attribute selection
+          required: false
+          type: string
+        - name: offset
+          in: query
+          description: >-
+            Requested index for start of resources to be provided in response
+            requested by client
+          required: false
+          type: number
+          format: double
+        - name: limit
+          in: query
+          description: >-
+            Requested number of resources  to be provided in response requested
+            by client
+          required: false
+          type: number
+          format: double
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/tmf-api/usageConsumption/v1/usageConsumptionReportRequest/{id}':
+    get:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: ' This operation retrieves an usage consumption report request entity using its unique id. Attribute selection is enabled for all attributes.'
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportRequestGet
+      parameters:
+        - name: id
+          in: path
+          description: ''
+          required: true
+          type: string
+        - name: fields
+          in: query
+          description: Attribute selection
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Success
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    delete:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: This operation deletes an usage consumption report request entity.
+      operationId: swagger_tmf-api_usageConsumption_v1_.usageConsumptionReportRequestDelete
+      parameters:
+        - name: id
+          in: path
+          description: ''
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /tmf-api/usageConsumption/v1/hub:
+    post:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: >-
+        Sets the communication endpoint address the service instance must use to
+        deliver information about its health state, execution state, failures
+        and metrics
+      operationId: swagger_tmf-api_usageConsumption_v1_.hubCreate
+      parameters:
+        - name: data
+          in: body
+          description: Data containing the callback endpoint to deliver the information
+          required: true
+          schema:
+            description: Data containing the callback endpoint to deliver the information
+            $ref: '#/definitions/HubInput'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Success
+            $ref: '#/definitions/Hub'
+      deprecated: false
+  '/tmf-api/usageConsumption/v1/hub/{hubId}':
+    delete:
+      tags:
+        - swagger_tmf-api_usageConsumption_v1_
+      summary: >-
+        Clears the communication endpoint address that was set by creating the
+        Hub
+      operationId: swagger_tmf-api_usageConsumption_v1_.hubDelete
+      parameters:
+        - name: hubId
+          in: path
+          description: ''
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /UsageConsumptionReports:
+    post:
+      tags:
+        - UsageConsumptionReport
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: UsageConsumptionReport.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+    patch:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: UsageConsumptionReport.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+    put:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: UsageConsumptionReport.replaceOrCreate__put_UsageConsumptionReports
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+    get:
+      tags:
+        - UsageConsumptionReport
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: UsageConsumptionReport.find
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+  /UsageConsumptionReports/replaceOrCreate:
+    post:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        UsageConsumptionReport.replaceOrCreate__post_UsageConsumptionReports_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+  /UsageConsumptionReports/upsertWithWhere:
+    post:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: UsageConsumptionReport.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+  '/UsageConsumptionReports/{id}/exists':
+    get:
+      tags:
+        - UsageConsumptionReport
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'UsageConsumptionReport.exists__get_UsageConsumptionReports_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/UsageConsumptionReports/{id}':
+    head:
+      tags:
+        - UsageConsumptionReport
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'UsageConsumptionReport.exists__head_UsageConsumptionReports_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - UsageConsumptionReport
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: UsageConsumptionReport.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+    put:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'UsageConsumptionReport.replaceById__put_UsageConsumptionReports_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+    delete:
+      tags:
+        - UsageConsumptionReport
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: UsageConsumptionReport.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: UsageConsumptionReport.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/UsageConsumptionReport'
+        - name: id
+          in: path
+          description: UsageConsumptionReport id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+  '/UsageConsumptionReports/{id}/replace':
+    post:
+      tags:
+        - UsageConsumptionReport
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: >-
+        UsageConsumptionReport.replaceById__post_UsageConsumptionReports_{id}_replace
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+  /UsageConsumptionReports/findOne:
+    get:
+      tags:
+        - UsageConsumptionReport
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: UsageConsumptionReport.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReport'
+      deprecated: false
+  /UsageConsumptionReports/update:
+    post:
+      tags:
+        - UsageConsumptionReport
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: UsageConsumptionReport.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/UsageConsumptionReport'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /UsageConsumptionReports/count:
+    get:
+      tags:
+        - UsageConsumptionReport
+      summary: Count instances of the model matched by where from the data source.
+      operationId: UsageConsumptionReport.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /UsageConsumptionReportRequests:
+    post:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: UsageConsumptionReportRequest.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    patch:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: UsageConsumptionReportRequest.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    put:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        UsageConsumptionReportRequest.replaceOrCreate__put_UsageConsumptionReportRequests
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    get:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: UsageConsumptionReportRequest.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+  /UsageConsumptionReportRequests/replaceOrCreate:
+    post:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: >-
+        UsageConsumptionReportRequest.replaceOrCreate__post_UsageConsumptionReportRequests_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+  /UsageConsumptionReportRequests/upsertWithWhere:
+    post:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: UsageConsumptionReportRequest.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+  '/UsageConsumptionReportRequests/{id}/exists':
+    get:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: Check whether a model instance exists in the data source.
+      operationId: >-
+        UsageConsumptionReportRequest.exists__get_UsageConsumptionReportRequests_{id}_exists
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/UsageConsumptionReportRequests/{id}':
+    head:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: Check whether a model instance exists in the data source.
+      operationId: >-
+        UsageConsumptionReportRequest.exists__head_UsageConsumptionReportRequests_{id}
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: UsageConsumptionReportRequest.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    put:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: >-
+        UsageConsumptionReportRequest.replaceById__put_UsageConsumptionReportRequests_{id}
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+    delete:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: UsageConsumptionReportRequest.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: UsageConsumptionReportRequest.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+        - name: id
+          in: path
+          description: UsageConsumptionReportRequest id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+  '/UsageConsumptionReportRequests/{id}/replace':
+    post:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: >-
+        UsageConsumptionReportRequest.replaceById__post_UsageConsumptionReportRequests_{id}_replace
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+  /UsageConsumptionReportRequests/findOne:
+    get:
+      tags:
+        - UsageConsumptionReportRequest
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: UsageConsumptionReportRequest.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/UsageConsumptionReportRequest'
+      deprecated: false
+  /Hubs:
+    post:
+      tags:
+        - Hub
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Hub.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hub'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+    patch:
+      tags:
+        - Hub
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Hub.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hub'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+    put:
+      tags:
+        - Hub
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Hub.replaceOrCreate__put_Hubs
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hub'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+    get:
+      tags:
+        - Hub
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Hub.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Hub'
+      deprecated: false
+  '/Hubs/{id}':
+    head:
+      tags:
+        - Hub
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Hub.exists__head_Hubs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Hub
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Hub.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+    put:
+      tags:
+        - Hub
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Hub.replaceById__put_Hubs_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hub'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+    delete:
+      tags:
+        - Hub
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Hub.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Hub
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Hub.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Hub'
+        - name: id
+          in: path
+          description: Hub id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+  /Hubs/findOne:
+    get:
+      tags:
+        - Hub
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Hub.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hub'
+      deprecated: false
+definitions:
+  UsageConsumptionReport:
+    properties:
+      id:
+        type: string
+      href:
+        description: Hyperlink to access the usage consumption report
+        type: string
+      name:
+        description: Usage consumption report name
+        type: string
+      description:
+        description: Free short text describing the usage consumption report content
+        type: string
+      effectiveDate:
+        format: date-time
+        description: >-
+          Date and time when the usage consumption report was calculated and
+          generated
+        type: string
+      baseType:
+        description: Indicates the base (class) type of the usage consumption report
+        type: string
+      type:
+        description: Indicates the (class) type of the usage consumption report
+        type: string
+      schemaLocation:
+        description: Link to the schema describing the REST resource
+        type: string
+      relatedParty:
+        $ref: '#/definitions/RelatedPartyRef'
+      bucket:
+        type: array
+        items:
+          $ref: '#/definitions/Bucket'
+    additionalProperties: false
+  UsageConsumptionReportRequestIn:
+    properties:
+      product:
+        $ref: '#/definitions/ProductRef'
+      bucket:
+        type: array
+        items:
+          $ref: '#/definitions/BucketRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      validPeriod:
+        $ref: '#/definitions/TimePeriod'
+      callbackUrl:
+        description: An url where the result could be notified
+        type: string
+      type:
+        description: Indicates the (class) type of the usage consumption report request
+        type: string
+      schemaLocation:
+        description: Link to the schema describing the REST resource
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  UsageConsumptionReportRequest:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      href:
+        description: Reference of the usage consumption report request
+        type: string
+      creationDate:
+        format: date-time
+        description: Date and time of the request creation
+        type: string
+      status:
+        description: Status of the usage consumption report request (InProgress or done)
+        type: string
+      lastUpdate:
+        format: date-time
+        description: Date when the status was last changed
+        type: string
+      callbackUrl:
+        description: An url where the result could be notified
+        type: string
+      validPeriod:
+        $ref: '#/definitions/TimePeriod'
+      product:
+        $ref: '#/definitions/ProductRef'
+      bucket:
+        type: array
+        items:
+          $ref: '#/definitions/BucketRef'
+      relatedParty:
+        type: array
+        items:
+          $ref: '#/definitions/RelatedPartyRef'
+      usageConsumptionReport:
+        $ref: '#/definitions/UsageConsumptionReportRef'
+      type:
+        description: Indicates the (class) type of the usage consumption report request
+        type: string
+      schemaLocation:
+        description: Link to the schema describing the REST resource
+        type: string
+    additionalProperties: false
+  HubInput:
+    properties:
+      callback:
+        description: The callback being registered
+        type: string
+      query:
+        description: Additional data to be passed
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  Hub:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      callback:
+        description: The callback being registered
+        type: string
+      query:
+        description: Additional data to be passed
+        type: string
+    additionalProperties: false
+  x-any:
+    properties: {}
+  ErrorRepresentation:
+    properties:
+      code:
+        format: int32
+        description: Application related code (as defined in the API or from a common list)
+        type: number
+      reason:
+        description: >-
+          Text that explains the reason for error. This can be shown to a client
+          user.
+        type: string
+      message:
+        description: >-
+          Text that provides more details and corrective actions related to the
+          error. This can be shown to a client user.
+        type: string
+      status:
+        description: http error code extension like 400-2
+        type: string
+      referenceError:
+        description: URL pointing to documentation describing the error
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    required:
+      - code
+    additionalProperties: false
+  Bucket:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      name:
+        description: Bucket name
+        type: string
+      usageType:
+        description: 'Type of usage concerned by the bucket (voice, sms, data,…)'
+        type: string
+      isShared:
+        description: True if the bucket is shared between several devices or users
+        type: boolean
+      type:
+        description: Indicates the (class) type of bucket
+        type: string
+      schemaLocation:
+        description: Link to the schema describing the REST resource
+        type: string
+      product:
+        $ref: '#/definitions/Product'
+      bucketBalance:
+        type: array
+        items:
+          $ref: '#/definitions/Balance'
+      bucketCounter:
+        type: array
+        items:
+          $ref: '#/definitions/ConsumptionCounter'
+    additionalProperties: false
+  RelatedPartyRef:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      href:
+        description: >-
+          Reference of the related party, could be a party reference or a party
+          role reference
+        type: string
+      name:
+        description: Name of the related party
+        type: string
+      role:
+        description: Role played by the related party
+        type: string
+      referredType:
+        description: Indicates the type of related party
+        type: string
+    additionalProperties: false
+  TimePeriod:
+    properties:
+      startDateTime:
+        format: date-time
+        description: Start date time of the period
+        type: string
+      endDateTime:
+        format: date-time
+        description: End date time of the period
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  Product:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      href:
+        description: Reference of the product
+        type: string
+      name:
+        description: Product Name
+        type: string
+      publicIdentifier:
+        description: >-
+          Public number associated to the product (msisdn number for mobile line
+          for example)
+        type: string
+      user:
+        $ref: '#/definitions/RelatedPartyRef'
+    additionalProperties: false
+  Balance:
+    properties:
+      unit:
+        description: >-
+          Code of the unit used to specify the given value of the balance. It
+          could be different from the bucket unit
+        type: string
+      remainingValue:
+        format: int64
+        description: >-
+          Numeric remaining value for the bucket given in the balance unit (for
+          example 1.9). This numeric value could be used for calculation for
+          example
+        type: number
+      remainingValueLabel:
+        description: >-
+          Remaining value in a formatted string for the bucket given in the
+          balance unit (for example 1.9 Gb). This formatted string could be used
+          for display needs for example
+        type: string
+      validFor:
+        $ref: '#/definitions/TimePeriod'
+      type:
+        description: Indicates the (class) type of the bucket balance
+        type: string
+      schemaLocation:
+        description: Link to the schema describing the REST resource
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  ConsumptionCounter:
+    properties:
+      counterType:
+        description: >-
+          Type of the consumption counter. We can give for example a counter of
+          the used value
+        type: string
+      level:
+        description: >-
+          Counter level. The given counter can be given globally for the bucket
+          or detailed by user or by product for example in case of shared bucket
+        type: string
+      unit:
+        description: Unit of the counter
+        type: string
+      value:
+        format: int64
+        description: Numeric value of the bucket counter in the given unit
+        type: number
+      valueLabel:
+        description: >-
+          Value of the counter in a formatted string used for display needs for
+          example
+        type: string
+      validFor:
+        $ref: '#/definitions/TimePeriod'
+      type:
+        description: Indicates the (class) type of consumption counter
+        type: string
+      schemaLocation:
+        description: Link to the schema describing the REST resource
+        type: string
+      product:
+        $ref: '#/definitions/ProductRef'
+      user:
+        $ref: '#/definitions/RelatedPartyRef'
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  BucketRef:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  ProductRef:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      publicIdentifier:
+        description: >-
+          Public number associated to the product (msisdn number for mobile line
+          for example)
+        type: string
+      user:
+        $ref: '#/definitions/RelatedPartyRef'
+    additionalProperties: false
+  UsageConsumptionReportRef:
+    properties:
+      id:
+        $ref: '#/definitions/ObjectID'
+      href:
+        description: Hyperlink to access the usage consumption report
+        type: string
+      name:
+        description: Usage consumption report name
+        type: string
+      description:
+        description: Free short text describing the usage consumption report content
+        type: string
+      effectiveDate:
+        format: date-time
+        description: >-
+          Date and time when the usage consumption report was calculated and
+          generated
+        type: string
+    additionalProperties: false
+  ObjectID:
+    type: string
+    pattern: '^[a-fA-F\d]{24}$'
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: selfcare-usage-consumption-api
+  version: 1.0.0
+  title: SelfCare-usage-consumption-api
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions: {}
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: >-
+          https://apiconnect-e9df514c-6067-468a-8558-8c7f81833c87.saisrinivasgortiibmcom-dev.apic.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

@@ -1,0 +1,236 @@
+[
+    {
+        "id": "30a98903.561c16",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2654ee7f.e34362",
+        "type": "watson-conversation-v1",
+        "z": "30a98903.561c16",
+        "name": "My Bot",
+        "workspaceid": "88a9b9b7-9e3b-4bbd-a2d3-0757108aa558",
+        "multiuser": false,
+        "context": false,
+        "empty-payload": true,
+        "default-endpoint": true,
+        "service-endpoint": "https://gateway.watsonplatform.net/assistant/api/v1/workspaces/ec70d037-81f9-4405-8199-8e3518871f27/message/",
+        "timeout": "",
+        "optout-learning": false,
+        "x": 768,
+        "y": 384,
+        "wires": [
+            [
+                "d4c7fcd3.96543"
+            ]
+        ]
+    },
+    {
+        "id": "f2b11d9d.dd74b",
+        "type": "http in",
+        "z": "30a98903.561c16",
+        "name": "BOT Home Page",
+        "url": "/bot",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 273,
+        "y": 280,
+        "wires": [
+            [
+                "53c07abf.9e2114"
+            ]
+        ]
+    },
+    {
+        "id": "41ea854c.da2eac",
+        "type": "template",
+        "z": "30a98903.561c16",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!--\n# Copyright 2018 IBM\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this file except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#     http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n-->\n\n<html>\n  <head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>\n\t  My BOT\n\t</title>\n\t<link rel=\"stylesheet\"\n        type=\"text/css\"\n        href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" />\n    <style>\n    #id_botchathistory{\n        height: 80%;\n        overflow-y: auto;\n    }\n    .Bot .message{\n        font-size: 1rem;\n        color: #323232;\n        letter-spacing: .015rem;\n        line-height: 1.3125rem;\n        background: #f2eeee;\n        border-radius: .55rem;\n        text-align: left;\n        display: inline-block;\n        min-width: 6rem;\n        max-width: 100%;\n        word-wrap: break-word;\n        margin-top: 5px;\n        margin-bottom: 5px;\n    }\n    .You .message{\n        font-size: 1rem;\n        color: #323232;\n        letter-spacing: .015rem;\n        line-height: 1.3125rem;\n        background: #ecf0f2;\n        border-radius: .55rem;\n        text-align: left;\n        display: inline-block;\n        min-width: 6rem;\n        max-width: 100%;\n        word-wrap: break-word;\n        margin-top: 5px;\n        margin-bottom: 5px;\n    }\n    .You { text-align:right;}\n    p{\n        padding: 1.5rem;\n        font-size: 1.5rem;\n    }\n    input{\n        width: 100%;\n        margin-top: 1rem;\n        border: 2px solid #464646;\n        background-color: #fff;\n        padding: .6em 1em;\n        font-size: 1em;\n        font-weight: 300;\n        line-height: normal;\n    }\n    table{\n        width : 50%;\n        font-weight: 300;\n        background-color: #f2eeee;\n        border-spacing:0;\n        border-collapse: collapse;\n    }\n    table.th{\n        text-align: left;\n        margin: 0px;\n        padding: 6px 13px;\n    }\n    table, th, td {\n        text-align: center;\n        padding-bottom: 5px;\n        padding-top: 5px;\n    }\n    </style>\n  </head>\n  <body style=\"height: 100%;\">\n    <div>  \n    <div class=\"header\" style=\"width:100%;background-color:#323232;\">\n        <div style=\"width: 75%;margin-bottom: 10px; margin-left: auto;margin-right: auto;\">\n        <h1 style=\"color:#fff;margin-top:0px;\">TMForum BOT</h1>\n        </div>\n    </div>\n    </div>\n    <div class=\"container\">\n      <div id=\"no-script\"class=\"bg-info\">\n        This application needs JavaScript enabled in your browser!\n      </div>\n      <div id=\"id_contextdump\"></div>\n      <div id=id_botchathistory>\n\t  </div>\n\t  \n\t  <div>\n\t      <form action=\"javascript:onChatClick();\">\n            <input type=\"text\" name=\"chattext\" id=\"id_chattext\" placeholder=\"Type here\">\n            <br/><br/>\n\t      </form>\n\t  </div>\n    </div>\n    \n    <script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-2.1.4.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n\n    <script>{{{payload.script}}}</script>\n  </body>\n</html>\n",
+        "x": 693.0000114440918,
+        "y": 279.00000381469727,
+        "wires": [
+            [
+                "fae77dae.e0526"
+            ]
+        ]
+    },
+    {
+        "id": "fae77dae.e0526",
+        "type": "http response",
+        "z": "30a98903.561c16",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 921,
+        "y": 274,
+        "wires": []
+    },
+    {
+        "id": "1eaef7c5.87d958",
+        "type": "http in",
+        "z": "30a98903.561c16",
+        "name": "BOT REST API",
+        "url": "/botchat",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 273,
+        "y": 386,
+        "wires": [
+            [
+                "ac9e8a96.9e7ad8"
+            ]
+        ]
+    },
+    {
+        "id": "981bbf7c.af",
+        "type": "http response",
+        "z": "30a98903.561c16",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1024,
+        "y": 381,
+        "wires": []
+    },
+    {
+        "id": "dce61d42.485ed",
+        "type": "function",
+        "z": "30a98903.561c16",
+        "name": "Pre Service Processing",
+        "func": "// stash away incoming data\nmsg.mydata = {};\nmsg.mydata.messagein = msg.req.body.msgdata;\nmsg.payload = msg.mydata.messagein;\n\nmsg.req.body.context.private={\n\t\t\"my_credentials\": {\n\t\t\t\"user\": msg.user,\n\t\t\t\"password\": msg.password\n\t\t}\n\t}\n\noriginalcontext = msg.req.body.context\n\nmsg.params = { \"context\": originalcontext};\n//msg.params = { \"context\": wsk};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 538,
+        "y": 404,
+        "wires": [
+            [
+                "2654ee7f.e34362",
+                "98385631.fe65e8"
+            ]
+        ]
+    },
+    {
+        "id": "d4c7fcd3.96543",
+        "type": "function",
+        "z": "30a98903.561c16",
+        "name": "Post Service Processing",
+        "func": "msg.mydata.messageout = msg.payload;\n\nmsg.payload = {};\nmsg.payload.botresponse = msg.mydata;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 888,
+        "y": 477,
+        "wires": [
+            [
+                "981bbf7c.af",
+                "f3a4a8da.8c1a98"
+            ]
+        ]
+    },
+    {
+        "id": "53c07abf.9e2114",
+        "type": "template",
+        "z": "30a98903.561c16",
+        "name": "JavaScript",
+        "field": "payload.script",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "$(document).ready(function() {\n    javascriptCheck();\n    $('#id_contextdump').hide();\n    enterbutton();\n    invokeAjax (\"Hello\");\n});\n\n// if javascript is enabled on the browser then can remove the warning message\nfunction javascriptCheck() {\n    $('#no-script').remove();\n}\n\n// creates div for interaction with bot      \nfunction createNewDiv(who, message) {\n    return $('<div class='+who+'></div>').append('<div class=\"message\"><p>'+message+'</p></div>');\n}\n\n// appends latest communication with bot to botchathistory\nfunction chat(person, txt) {\n    $('#id_botchathistory').append(createNewDiv(person, txt));\n}    \n\n// creates div for interaction with bot      \nfunction createNewTable(who, message, note) {\n    message = JSON.parse(message);\n    var keys = [];\n    keys = Object.keys(message[0]);\n\n    var table_body = '<table border=\"1\" id=\"tickets\"><thead><tr>';\n    for(k = 0; k<keys.length;k++){\n        table_body+= '<th>'+keys[k]+'</th>';\n    }\n    table_body += '</tr></thead><tbody>';\n    \n    for(i = 0; i<message.length;i++){\n        msg = message[i];\n        table_body+='<tr>';\n        for(j = 0;j<keys.length;j++){\n            table_body +='<td>'+msg[keys[j]]+'</td>';\n        }\n        table_body+='</tr>';\n\n    }\n    table_body+='</tbody></table>';\n    //var txt = who + ' : ' + table_body;\n    var txt = '<p>'+note+'</p>';\n    return $('<div class='+who+'></div>').append(txt,table_body);\n}\n\n// appends latest communication with bot to botchathistory\nfunction chatTab(person, txt, note) {\n    $('#id_botchathistory').append(createNewTable(person, txt, note));\n}  \n\n// sets pressing of enter key to perform same action as send button\nfunction enterbutton(){\n    $(function() {\n        $(\"form input\").keypress(function (e) {\n        if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {\n             onChatClick();\n             return false;\n        } else {\n        return true;\n        }\n     });\n    });\n}\n\n// User has entered some text.\nfunction onChatClick() {\n    var txt = $('#id_chattext').val();\n    chat('You', txt); \n    invokeAjax(txt);\n    $('#id_chattext').val('');\n}\n\nfunction processOK(response) {\n    /*console.log('response',response);\n    console.log('messageout',response.botresponse.messageout);*/\n    //console.log('output text',response.botresponse.messageout.output.text);\n    var mesg = response.botresponse.messageout.output.text;\n    console.log('message',mesg);\n    var context = response.botresponse.messageout.context.summary;\n    if(context == 'from-watson-table'){\n        console.log('in table');\n        var note = response.botresponse.messageout.output.text[0];\n        console.log('note',note)\n        var msg = response.botresponse.messageout.output.text[1].result;\n        chatTab('Bot', msg, note);\n    }\n    else{\n        console.log('in watson');\n        if(mesg.length > 1){\n            if(typeof(mesg[1]) === 'string'){\n                console.log('1');\n                chat('Bot', response.botresponse.messageout.output.text.join('\\n'));\n            }\n            else if(typeof(mesg[1]) === 'object'){\n                console.log('2');\n                chat('Bot', JSON.stringify(mesg[1].ticket,null,4));\n            }\n        }\n        else{\n            console.log('3');\n            chat('Bot', response.botresponse.messageout.output.text.join('\\n'));\n        }\n    }\n    $('#id_contextdump').data('convContext', response.botresponse.messageout.context);\n}\n      \nfunction processNotOK() {\n    chat('Error', 'Error whilst attempting to talk to Bot');\n}\n      \nfunction invokeAjax(message) {\n    var contextdata = $('#id_contextdump').data('convContext');\n    console.log('contextdata',contextdata);\n        \n    var ajaxData = {};\n    ajaxData.msgdata = message;\n    if (contextdata) {\n        ajaxData.context = contextdata;    \n    }\n    else{\n        ajaxData.context = {\"private\":\"\"}\n    }\n\n    $.ajax({\n        type: 'POST',\n        url: 'botchat',\n        data: ajaxData,\n        success: processOK,\n        error: processNotOK\n    });\n}",
+        "output": "str",
+        "x": 497,
+        "y": 275,
+        "wires": [
+            [
+                "bb484f48.f89df",
+                "41ea854c.da2eac"
+            ]
+        ]
+    },
+    {
+        "id": "ac98fba2.12c498",
+        "type": "comment",
+        "z": "30a98903.561c16",
+        "name": "Conversation BOT Template",
+        "info": "",
+        "x": 313,
+        "y": 234,
+        "wires": []
+    },
+    {
+        "id": "3585f83e.6e8808",
+        "type": "comment",
+        "z": "30a98903.561c16",
+        "name": "Conversation REST API",
+        "info": "",
+        "x": 292,
+        "y": 346,
+        "wires": []
+    },
+    {
+        "id": "f3a4a8da.8c1a98",
+        "type": "debug",
+        "z": "30a98903.561c16",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 948,
+        "y": 584,
+        "wires": []
+    },
+    {
+        "id": "98385631.fe65e8",
+        "type": "debug",
+        "z": "30a98903.561c16",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 688,
+        "y": 604,
+        "wires": []
+    },
+    {
+        "id": "bb484f48.f89df",
+        "type": "debug",
+        "z": "30a98903.561c16",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "x": 688,
+        "y": 165,
+        "wires": []
+    },
+    {
+        "id": "ac9e8a96.9e7ad8",
+        "type": "function",
+        "z": "30a98903.561c16",
+        "name": "Change credentials here",
+        "func": "msg.user ='bca8126e-8235-4c39-8308-53b237363f58'\nmsg.password = 'X0XAai1CsT9gkX2jRLDCsHUwbiFaWbfXBvgbOTWyqPqNa7ocdQyui3li8xUR24mj'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 388,
+        "y": 504,
+        "wires": [
+            [
+                "dce61d42.485ed"
+            ]
+        ]
+    }
+]
