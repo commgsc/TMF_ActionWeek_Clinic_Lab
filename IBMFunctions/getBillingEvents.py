@@ -3,7 +3,7 @@ import requests
 import json,operator
 
 def main(dict):
-    response = requests.get('https://api.us.apiconnect.ibmcloud.com/saisrinivasgortiibmcom-dev/sb/api/Usages?filter={"where":{"relatedParty.role":"customer","relatedParty.id":"cst123","type":"voice","date":{"gt":"2018-04-01"}}}')
+    response = requests.get('https://api.us.apiconnect.ibmcloud.com/tmedemousibmcom-dev/sb/api/Usages?filter={"where":{"relatedParty.role":"customer","relatedParty.id":"cst123","type":"voice","date":{"gt":"2018-04-01"}}}')
     res = response.json()
     data = []
     for item in res:

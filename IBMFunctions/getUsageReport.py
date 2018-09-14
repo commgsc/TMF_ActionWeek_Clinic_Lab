@@ -4,7 +4,7 @@ import json
 import datetime
 
 def main(dict):
-    response = requests.get('https://api.us.apiconnect.ibmcloud.com/saisrinivasgortiibmcom-dev/sb/api/UsageConsumptionReports?filter={"where":{"bucket.product.id":"mobile999"}}')
+    response = requests.get('https://api.us.apiconnect.ibmcloud.com/tmedemousibmcom-dev/sb/api/UsageConsumptionReports?filter={"where":{"bucket.product.id":"mobile999"}}')
     res = response.json()
     buckets = res[0]['bucket']
     data = []
