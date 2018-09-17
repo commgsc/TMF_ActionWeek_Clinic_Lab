@@ -1,0 +1,18 @@
+// stash away incoming data
+msg.mydata = {};
+msg.mydata.messagein = msg.req.body.msgdata;
+msg.payload = msg.mydata.messagein;
+
+msg.req.body.context.private={
+		"my_credentials": {
+			"user": msg.user,
+			"password": msg.password
+		}
+	}
+
+originalcontext = msg.req.body.context
+
+msg.params = { "context": originalcontext};
+//msg.params = { "context": wsk};
+
+return msg;
