@@ -2,4 +2,6 @@ Git Repository for TM Forum Sample node application has been moved to https://gi
 
 Clone the repository using 
 
+```
 git clone https://github.com/commgsc/IBM-WatsonAssistant-SelfCare
+```
