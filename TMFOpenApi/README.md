@@ -1,5 +1,5 @@
 OpenAPI:
-OpenAPI specification(formerly Swagger Specification) is a specification for describing REST APIs. With OpenAPI, instead of XML, you have set of JSON objects, with a specific schema that defines their naming, order, and contents. This JSON file (often expressed in YAML instead of JSON) describes each part of your API. By describing your API in a standard format, publishing tools can programmatically ingest the information about your API and display each component in a stylized, interactive display.
+OpenAPI is a specification for describing REST APIs. With OpenAPI, instead of XML, you have set of JSON objects, with a specific schema that defines their naming, order, and contents. This JSON file (often expressed in YAML instead of JSON) describes each part of your API. By describing your API in a standard format, publishing tools can programmatically ingest the information about your API and display each component in a stylized, interactive display.
 
 An OpenAPI file allows you to describe your entire API, including:
 a) Available endpoints (/users) and operations on each endpoint (GET /users, POST /users)
