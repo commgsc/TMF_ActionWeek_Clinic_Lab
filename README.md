@@ -8,9 +8,10 @@ check step by step instructions from
 2. Register and explore Open API's (Optional) : https://www.tmforum.org/open-apis/
 
 3. Register and join the API Project (Optional) : https://www.tmforum.org/collaboration/api-project/  
-    then Read on the Customer Management Suite we will be recreating Customer Selfcare with AI scenario as part of Open Digital Lab       Clinic: https://projects.tmforum.org/wiki/pages/viewpage.action?spaceKey=AP&title=TMF910+SelfCare-CustomerManagement+ComponentSuite+Candidate+for+Team+Review&preview=/90523799/93978746/DataModelExamplesFor_TMF910_API_Suite_component_for_SelfCareApp_v1.0.docx
+    then Read on the Customer Management Suite. 
+    We will be recreating Customer Selfcare with AI scenario as part of Open Digital Lab Clinic: https://projects.tmforum.org/wiki/pages/viewpage.action?spaceKey=AP&title=TMF910+SelfCare-CustomerManagement+ComponentSuite+Candidate+for+Team+Review&preview=/90523799/93978746/DataModelExamplesFor_TMF910_API_Suite_component_for_SelfCareApp_v1.0.docx
     
-4. Read on what Open Digital Lab is (Optional) : https://inform.tmforum.org/open-apis/2018/06/tm-forum-open-digital-lab-provides-sandbox-innovation/
+4. Open Digital Lab (Optional) : Read on what open digital lab is from : https://inform.tmforum.org/open-apis/2018/06/tm-forum-open-digital-lab-provides-sandbox-innovation/
  
 ## Overview
 The Open Digital Lab provides a safe space for inter-company collaborative proof of concept generation leveraging open standards. With the pace of change in the industry continuing to accelerate, and partnerships with other companies to deliver new services and solutions increasing in importance, there has never been a greater need for an environment for collaborative co-creation of innovative new solutions and services. The TM Forum Open Digital lab hosted by IBM provides this environment where inter-company proof of concepts can be rapidly developed, tested and iterated.
