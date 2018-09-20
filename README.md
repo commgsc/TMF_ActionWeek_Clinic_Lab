@@ -31,3 +31,16 @@ TM Forum APIs are replicated using IBM API Connect and these APIs are invoked us
 ![**Architecture**](readme_images/Architecture.jpg)
 
 ## Steps for the Lab
+1. Environment Setup
+    - Creating an IBM Cloud Account
+    - Creating a Watson Assistant Service
+    - Instantiate a Node-red starter
+
+2. Self-Care App Lab
+    - Create and configure IBM Functions Service
+    - Create a sample conversation using Watson Assistant
+    - Importing Node-RED Flow of the application
+    - Test the Node-RED application
+    - Create Node-RED flow (optional)
+
+
