@@ -1,4 +1,4 @@
-# MongoDB:
+# MongoDB
 MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling.
 A record in MongoDB is a document, which is a data structure composed of field and value pairs. MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.
 
