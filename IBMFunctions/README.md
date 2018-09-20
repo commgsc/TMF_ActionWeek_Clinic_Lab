@@ -1,4 +1,4 @@
-#IBM Functions
+# IBM Functions
 IBM Cloud Functions (based on Apache OpenWhisk) is a Function-as-a-Service (FaaS) platform which executes functions in response to incoming events.
 
 Given Cloud Functions’s event-driven nature, it offers several benefits for user-facing applications, whereas the HTTP requests coming from the user’s browser serve as the events. Cloud Functions applications use compute capacity and billed only when they are serving user requests. Idle standby or waiting mode is nonexistent. This feature makes Cloud Functions considerably less expensive when compared to traditional containers or CloudFoundry applications. Both of which can spend most of their time idle, waiting for inbound user requests, and being billed for all that “sleeping” time.
